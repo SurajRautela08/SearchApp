@@ -70,22 +70,54 @@
 		448E8D9D256B832B00461AC5 /* SearchApp */ = {
 			isa = PBXGroup;
 			children = (
+				448E8DC5256C0BFA00461AC5 /* Cells */,
+				448E8DC4256C0BCD00461AC5 /* Model */,
+				448E8DC3256C0BA800461AC5 /* ViewControllers */,
+				448E8DC2256C0B8100461AC5 /* Helpers */,
 				448E8D9E256B832B00461AC5 /* AppDelegate.swift */,
 				448E8DA0256B832B00461AC5 /* SceneDelegate.swift */,
-				448E8DA2256B832B00461AC5 /* SearchViewController.swift */,
 				448E8DA4256B832B00461AC5 /* Main.storyboard */,
 				448E8DA7256B832E00461AC5 /* Assets.xcassets */,
 				448E8DA9256B832E00461AC5 /* LaunchScreen.storyboard */,
 				448E8DAC256B832E00461AC5 /* Info.plist */,
-				448E8DB2256B85B900461AC5 /* SearchResultsViewController.swift */,
-				448E8DB4256B8B3700461AC5 /* Model.swift */,
-				448E8DB6256B9CA400461AC5 /* ActivityIndicator.swift */,
-				448E8DB8256BA6E500461AC5 /* ImageTableViewCell.swift */,
-				448E8DB9256BA6E500461AC5 /* ImageTableViewCell.xib */,
-				448E8DBE256BD5D900461AC5 /* ImageLoader.swift */,
-				448E8DC0256BEE6800461AC5 /* DetailViewController.swift */,
 			);
 			path = SearchApp;
+			sourceTree = "<group>";
+		};
+		448E8DC2256C0B8100461AC5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				448E8DB6256B9CA400461AC5 /* ActivityIndicator.swift */,
+				448E8DBE256BD5D900461AC5 /* ImageLoader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		448E8DC3256C0BA800461AC5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				448E8DA2256B832B00461AC5 /* SearchViewController.swift */,
+				448E8DB2256B85B900461AC5 /* SearchResultsViewController.swift */,
+				448E8DC0256BEE6800461AC5 /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		448E8DC4256C0BCD00461AC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				448E8DB4256B8B3700461AC5 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		448E8DC5256C0BFA00461AC5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				448E8DB8256BA6E500461AC5 /* ImageTableViewCell.swift */,
+				448E8DB9256BA6E500461AC5 /* ImageTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

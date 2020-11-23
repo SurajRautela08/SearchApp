@@ -19,6 +19,10 @@ class SearchResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialSetups()
+    }
+    
+    func initialSetups() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ImageTableViewCell", bundle: nil), forCellReuseIdentifier: imageCellIdentifier)
@@ -28,7 +32,6 @@ class SearchResultsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let identifier = segue.identifier else { return }
-
         if identifier == searchDetailidentifier {
             if let vc = segue.destination as? DetailViewController {
             vc.imageNames = self.imageArray

@@ -13,13 +13,20 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var swipeImageView: LazyImageView!
     
     var imageNames = [String]()
-
-
-
     var currentImage = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        gestureSetups()
+        
+        if let imageUrl = URL(string: imageNames[currentImage]) {
+            swipeImageView.loadImage(fromURL: imageUrl, placeHolderImage: "placeHolderImage")
+        }
+    }
+    
+    // For Swipe Gesture on ImageView
+    func gestureSetups() {
+        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(swipeRight)
@@ -29,6 +36,7 @@ class DetailViewController: UIViewController {
         self.view.addGestureRecognizer(swipeLeft)
     }
     
+    // Swipe gesture Response
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
 
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
